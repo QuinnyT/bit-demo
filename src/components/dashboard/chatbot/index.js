@@ -12,30 +12,30 @@ import { useEffect, useState } from "react";
 import MessageList from "./components/message-list";
 import MessageInput from "./components/message-input";
 
-export function ChatBot({ messages, setMessages }) {
-  // const [messages, setMessages] = useState([]);
+export function ChatBot() {
+  const [messages, setMessages] = useState([]);
 
-  // useEffect(() => {
-  //   async function getHistoryData() {
-  //     try {
-  //       const response = await fetch('/api/message');
-  //       if (!response.ok) {
-  //         throw new Error("获取聊天记录时出现问题");
-  //       }
-  //       const result = await response.json();
-  //       const messages = result.map((res) => {
-  //         return {
-  //           role: res.sender,
-  //           content: res.text
-  //         }
-  //       })
-  //       setMessages(messages);
-  //     } catch (error) {
-  //       console.log("获取聊天记录时出现问题", error)
-  //     }
-  //   }
-  //   getHistoryData();
-  // }, [])
+  useEffect(() => {
+    async function getHistoryData() {
+      try {
+        const response = await fetch('/api/message');
+        if (!response.ok) {
+          throw new Error("获取聊天记录时出现问题");
+        }
+        const result = await response.json();
+        const messages = result.map((res) => {
+          return {
+            role: res.sender,
+            content: res.text
+          }
+        })
+        setMessages(messages);
+      } catch (error) {
+        console.log("获取聊天记录时出现问题", error)
+      }
+    }
+    getHistoryData();
+  }, [])
   
   async function handleNewMessage(value) {
     // console.log("value", value)
