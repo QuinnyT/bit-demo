@@ -14,7 +14,8 @@ export default function Layout({ children }: LayoutProps): React.JSX.Element {
   const router = useRouter();
   const storesList = ["store1", "store2", "store3", "store4"]
 
-  async function changeSelectedStore (storeId: string): Promise<void> {
+  async function changeSelectedStore (storeIndex: number): Promise<void> {
+    const storeId = storesList[storeIndex];
     try {
       router.push(`/dashboard/lists/stores/${storeId}`);
     } catch (error) {

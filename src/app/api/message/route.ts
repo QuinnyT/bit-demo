@@ -29,7 +29,7 @@ async function saveData(userMsg: ChatGPTMessage, botMsg: OpenAI.Chat.Completions
 }
 
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     await dbConnect();
     const messages = await ChatMessage.find().sort({ timestamp: 1 });

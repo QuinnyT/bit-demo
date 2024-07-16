@@ -6,7 +6,15 @@ import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-export function MySideNav({ title, lists, changeSelectedItem }: { title: string; lists: string[]; changeSelectedItem?: (item: string) => void }): React.JSX.Element {
+interface MySideNavProps {
+  title: string;
+  lists: string[];
+  selectedIndex?: number;
+  changeSelectedItem?: (item: number) => void;
+  children?: React.ReactNode;
+}
+
+export function MySideNav({ title, lists, selectedIndex, changeSelectedItem, children }: MySideNavProps): React.JSX.Element {
   return (
     <Box
       sx={{
@@ -52,22 +60,21 @@ export function MySideNav({ title, lists, changeSelectedItem }: { title: string;
       </Stack>
       <Divider sx={{ borderColor: 'var(--mui-palette-neutral-700)' }} />
       <Box component="nav" sx={{ flex: '1 1 auto', p: '12px' }}>
-         {lists.map((item) => (
+         {lists.map((item, index) => (
           <Box key={item}
-               onClick={(event: React.MouseEvent) => {
+               onClick={() => {
                   if (changeSelectedItem)
-                    {
-                      const target = event.target as HTMLElement;
-                      changeSelectedItem(target.innerText)
-                    }
+                    changeSelectedItem(index)
                }}
                sx={{
                  display: 'flex',
                  alignItems: 'center',
                  justifyContent: 'center',
-                 backgroundColor: 'var(--mui-palette-neutral-950)',
+                 backgroundColor: index === selectedIndex ? '#BFC1D9' : 'var(--mui-palette-neutral-950)',
                  cursor: 'pointer',
                  mt: 2,
+                 height: '3rem',
+                 borderRadius: '10px'
                }} >
             <Typography color="var(--mui-palette-neutral-400)" variant="body2">
               {item}
@@ -76,6 +83,8 @@ export function MySideNav({ title, lists, changeSelectedItem }: { title: string;
          ))}
           
       </Box>
+      <Stack justifyContent="center" alignItems="center" p={2}>{children}</Stack>
+      
     </Box>
   );
 }

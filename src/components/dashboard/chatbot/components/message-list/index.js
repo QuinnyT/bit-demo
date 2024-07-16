@@ -13,7 +13,7 @@ function MessageList({messages}) {
   }, [messages]);
 
   return (
-    <Container sx={{height: '82vh', overflow: 'auto', mt: 5, mb: 10,}}>
+    <Container sx={{height: '70vh', overflow: 'auto', mt: 5, mb: 10,}}>
       <Container>
         {messages.map((message, index) => (
           <Box key={index} sx={{
