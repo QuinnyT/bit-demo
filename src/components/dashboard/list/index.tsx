@@ -23,11 +23,13 @@ function List({ items } : { items: Item[] }): React.JSX.Element {
             <TextField fullWidth variant="outlined" />
             <Button variant="contained">search</Button>
         </Container>
-        <Container sx={{ display: 'flex', gap: 4, mt: 5}}>
+        <Container sx={{ display: 'flex', flexWrap: 'wrap', gap: 4, mt: 5, mr: 5}}>
             {items.map((item) => (
               <Link href={`/dashboard/lists/items/${item.name}`} key={item.name}>
                 <Box>
-                  <Box height={200} width={200} sx={{ p: 2, borderRadius: 2, border: '1px solid grey', display: 'flex', alignItems: 'center', justifyContent: 'center' }} />
+                  <Box height={200} width={200} sx={{ p: 2, borderRadius: 2, border: '1px solid grey', display: 'flex', alignItems: 'center', justifyContent: 'center' }} >
+                    <img width={180} height={180} src={item.image} alt='item.name'/>
+                  </Box>
                   <Typography variant="body2" sx={{ textAlign: 'center', mt: 1 }}>
                     {item.name}
                   </Typography>

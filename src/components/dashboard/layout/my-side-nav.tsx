@@ -28,8 +28,8 @@ export function MySideNav({ title, lists, selectedIndex, changeSelectedItem, chi
         '--NavItem-icon-color': 'var(--mui-palette-neutral-400)',
         '--NavItem-icon-active-color': 'var(--mui-palette-primary-contrastText)',
         '--NavItem-icon-disabled-color': 'var(--mui-palette-neutral-600)',
-        bgcolor: 'var(--SideNav-background)',
-        color: 'var(--SideNav-color)',
+        bgcolor: '#040332',
+        // color: 'var(--SideNav-color)',
         display: { xs: 'none', lg: 'flex' },
         flexDirection: 'column',
         height: '80%',
@@ -49,11 +49,12 @@ export function MySideNav({ title, lists, selectedIndex, changeSelectedItem, chi
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: 'var(--mui-palette-neutral-950)',
+            // backgroundColor: 'var(--mui-palette-neutral-950)',
+            color: '#fff',
             p: '4px 12px',
           }}
         >
-          <Typography color="var(--mui-palette-neutral-400)" variant="h5">
+          <Typography variant="h5">
             {title}
           </Typography>
         </Box>
@@ -70,13 +71,15 @@ export function MySideNav({ title, lists, selectedIndex, changeSelectedItem, chi
                  display: 'flex',
                  alignItems: 'center',
                  justifyContent: 'center',
-                 backgroundColor: index === selectedIndex ? '#BFC1D9' : 'var(--mui-palette-neutral-950)',
+                 color: index === selectedIndex ? '#000' : '#fff',
+                 backgroundColor: index === selectedIndex ? '#BFC1D9' : 'none',
                  cursor: 'pointer',
                  mt: 2,
                  height: '3rem',
                  borderRadius: '10px'
                }} >
-            <Typography color="var(--mui-palette-neutral-400)" variant="body2">
+            {/* <Typography color="var(--mui-palette-neutral-400)" variant="body2"> */}
+            <Typography color={index === selectedIndex ? '#000' : '#fff'} variant="body2">
               {item}
             </Typography>
           </Box>
