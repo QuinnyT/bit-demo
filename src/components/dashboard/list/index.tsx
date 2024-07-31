@@ -11,9 +11,11 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Link from 'next/link';
 
+
 interface Item {
   image: string;
   name: string;
+  name_ch: string;
 }
 
 function List({ items } : { items: Item[] }): React.JSX.Element {
@@ -31,7 +33,7 @@ function List({ items } : { items: Item[] }): React.JSX.Element {
                     <img width={180} height={180} src={item.image} alt='item.name'/>
                   </Box>
                   <Typography variant="body2" sx={{ textAlign: 'center', mt: 1 }}>
-                    {item.name}
+                    {item.name_ch}
                   </Typography>
                 </Box>
               </Link>

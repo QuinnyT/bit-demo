@@ -11,7 +11,7 @@ export default function Page({ params }: { params: { id: string } }): React.JSX.
   return (
     <Stack m={0}>
       <Stack direction="row" justifyContent="center" alignItems="center" spacing={3}>
-        <Typography variant='h3' sx={{ textAlign: 'center'}} >{item?.name}</Typography>
+        <Typography variant='h3' sx={{ textAlign: 'center'}} >{item?.name_ch}</Typography>
       </Stack>
       <Stack direction="row" justifyContent="center" alignItems="center" spacing={16}>
         <Typography variant='body1' sx={{ maxWidth: '80%', p: 4 }} >
