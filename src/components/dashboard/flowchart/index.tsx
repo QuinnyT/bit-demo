@@ -40,7 +40,7 @@ function FlowChart(): React.JSX.Element {
         >
           <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
             <Paper elevation={3} style={styles.node}>
-              <Typography variant="body1"> Store 1</Typography>
+              <Typography variant="body1"> 货柜 A </Typography>
             </Paper>
             <svg height="70" width="100">
               <defs>
@@ -65,7 +65,7 @@ function FlowChart(): React.JSX.Element {
               </text>
             </svg>
             <Paper elevation={3} style={styles.node}>
-              <Typography variant="body1">Store 2</Typography>
+              <Typography variant="body1">货柜 B</Typography>
             </Paper>
             <svg height="70" width="100">
               <line x1="0" y1="40" x2="100" y2="40" style={styles.line} />
@@ -77,7 +77,7 @@ function FlowChart(): React.JSX.Element {
               </text>
             </svg>
             <Paper elevation={3} style={styles.node}>
-              <Typography variant="body1">Store 3</Typography>
+              <Typography variant="body1">货柜 C</Typography>
             </Paper>
             <svg height="70" width="100">
               <line x1="0" y1="40" x2="100" y2="40" style={styles.line} />
@@ -89,7 +89,7 @@ function FlowChart(): React.JSX.Element {
               </text>
             </svg>
             <Paper elevation={3} style={styles.node}>
-              <Typography variant="body1">Store 1</Typography>
+              <Typography variant="body1">货柜 A</Typography>
             </Paper>
           </Box>
         </Box>

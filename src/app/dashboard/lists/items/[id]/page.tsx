@@ -15,23 +15,25 @@ export default function Page({ params }: { params: { id: string } }): React.JSX.
       </Stack>
       <Stack direction="row" justifyContent="center" alignItems="center" spacing={16}>
         <Typography variant='body1' sx={{ maxWidth: '80%', p: 4 }} >
-          Storage time: 2024/7/01<br/>
-          Operator: Xiao Ming<br/>
-          Item storage location: store 1<br/>
+          存储时间: 2024/07/01<br/>
+          使用者: 小明<br/>
+          物件存放位置: 舱段1 第一象限<br/>
           <br/>
-          Usage:<br/>
-          1. Time of use: 2024/07/01 14:12<br/>
-          User: Xiao Hua<br/>
-          Item operation: Take from store 1<br/>
-          Current storage location: store 2<br/>
-          2. Time of use: 2024/07/02 9:10<br/>
-          User: Xiao Ming<br/>
-          Item operation: Take from store 2<br/>
-          Current storage location: store 3<br/>
-          3. Time of use: 2024/07/02 20:21<br/>
-          User: XiaoHua<br/>
-          Item operation: Take from store 3<br/>
-          Current storage location: store 1<br/>
+          使用记录:<br/>
+          1. 使用时间: 2024/07/01 14:12<br/>
+          使用者: 小华<br/>
+          物品操作: 从 舱段1-第一象限-货柜A 拿取<br/>
+          存放位置: 舱段1-第一象限-货柜B<br/>
+          <br/>
+          2. 使用时间: 2024/07/02 9:10<br/>
+          使用者: 小明<br/>
+          物品操作: 从 舱段1-第一象限-货柜B 拿取<br/>
+          存放位置: 舱段1-第一象限-货柜C<br/>
+          <br/>
+          3. 使用时间: 2024/07/02 20:21<br/>
+          使用者: 小华<br/>
+          物品操作: 从 舱段1-第一象限-货柜C 拿取<br/>
+          存放位置:  舱段1-第一象限-货柜A<br/>
         </Typography>
         <img width={180} height={180} src={item?.image} alt='item.name'/>
 

@@ -24,3 +24,13 @@ export const itemsList: {
       name: "Pliers",
     }
   ]
+
+
+
+  
+   const nameMap = new Map<string, string>();
+  nameMap.set("store1", "舱段 1");
+  nameMap.set("store2", "舱段 2");
+  nameMap.set("store3", "舱段 3");
+  nameMap.set("store4", "舱段 4");
+  export { nameMap };
