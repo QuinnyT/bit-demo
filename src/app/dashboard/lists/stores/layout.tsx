@@ -27,7 +27,7 @@ export default function Layout({ children }: LayoutProps): React.JSX.Element {
   }
   return (
     <Stack spacing={3}>
-      <MySideNav title="象限" lists={storesList} selectedIndex={selectedIndex}  changeSelectedItem={changeSelectedStore}  />
+      <MySideNav title="舱段 1" lists={storesList} selectedIndex={selectedIndex}  changeSelectedItem={changeSelectedStore}  />
       {children}
     </Stack>
   );
