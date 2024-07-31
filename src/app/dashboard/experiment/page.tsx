@@ -6,10 +6,12 @@ export default function Page(): React.JSX.Element {
     {
       image: "",
       name: "good1",
+      name_ch: "物品 1"
     },
     {
       image: "",
       name: "good2",
+      name_ch: "物品 2"
     },
   ]
   return (
