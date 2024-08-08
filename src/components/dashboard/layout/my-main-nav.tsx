@@ -14,7 +14,7 @@ import { type MyNavItemConfig } from '@/types/nav'
 
 import Link from 'next/link';
 import Button from '@mui/material/Button';
-import { Logo } from '@/components/core/logo';
+// import { Logo } from '@/components/core/logo';
 
 export function MyMainNav({ routes } : { routes: MyNavItemConfig[] }): React.JSX.Element {
   const [openNav, setOpenNav] = React.useState<boolean>(false);
@@ -48,7 +48,8 @@ export function MyMainNav({ routes } : { routes: MyNavItemConfig[] }): React.JSX
           spacing={2}
           sx={{ alignItems: 'center', justifyContent: 'space-between', minHeight: '64px', px: 2 }}
         >
-          <Logo color="light" height={32} width={122} />
+          {/* <Logo color="light" height={32} width={122} /> */}
+          <Box width={122}/>
           <Stack sx={{ alignItems: 'center', marginLeft: '2rem' }} direction="row" spacing={2}>
             <Tabs
               // textColor="secondary"
