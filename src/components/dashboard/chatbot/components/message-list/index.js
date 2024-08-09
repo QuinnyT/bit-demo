@@ -9,6 +9,7 @@ import { useRef, useEffect } from "react";
 function MessageList({messages}) {  
   const msgsEndRef = useRef(null);
   useEffect(() => {
+    console.log("messages", messages)
     msgsEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
@@ -29,7 +30,7 @@ function MessageList({messages}) {
                      color: message.role === 'user' ? 'secondary.contrastText' : 'primary.contrastText',
                    }}
             >
-              <Typography variant="body2">
+              <Typography variant="body2" style={{ whiteSpace: 'pre-line' }}>
                 {message.content}
               </Typography>
             </Paper>
