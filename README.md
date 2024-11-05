@@ -1,7 +1,7 @@
 ### Demo and Live Preview
+ [Live Demo (deployed on Vercel)](https://bit-demo.vercel.app/)
 
 See the feature in action:
- [Live Demo (deployed on Vercel)](https://bit-demo.vercel.app/)
  
 ![Feature Demo](https://github.com/QuinnyT/bit-demo/blob/master/public/bit-gif.GIF)
 
