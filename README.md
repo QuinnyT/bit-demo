@@ -14,10 +14,10 @@ npm run dev
 ```
 
 ## Tech Stack and Dependencies
-- Framework: Next.js + TypeScript
-- UI Library：Material UI
-- Database：MongoDB
-- Chat API: OpenAI
+- Framework: `Next.js` + `TypeScript`
+- UI Library：`Material UI`
+- Database：`MongoDB`
+- Chat API: `OpenAI`
   
 ## File Structure
 
