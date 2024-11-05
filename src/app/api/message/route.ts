@@ -9,13 +9,13 @@ import ChatMessage from '@/model/chat-message';
 import dbConnect from '@/lib/mongodb';
 
 const openai = new OpenAI({
-  baseURL: "https://apikeyplus.com/v1",
+  baseURL: "https://chatapi.midjourney-vip.cn/v1",
   apiKey: process.env.OPENAI_API_KEY
 });
 
 async function getRes(messages: ChatGPTMessage[]) {
   const data = await openai.chat.completions.create({
-      model: 'gpt-3.5-turbo',
+      model: 'gpt-4',
       messages: messages
   })
   return data;
