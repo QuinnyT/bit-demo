@@ -1,4 +1,4 @@
-### Demo and Live Preview
+## Demo and Live Preview
  [Live Demo (deployed on Vercel)](https://bit-demo.vercel.app/)
 
 See the feature in action:
